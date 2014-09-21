@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        <style>
+            div, header, footer, .content {
+                box-sizing: border-box;
+                padding: 5px;
+                border: 1px solid red;
+                margin: 5px;
+            } 
+
+            .header, .footer {
+                display: block;
+            }       
+            .content {
+                display: table;
+            }       
+            .widget {
+                background: red;
+                display: block;
+                width: 200px;
+                height: 200px;
+                float: left;
+            }
+            .gadget {
+                border-radius: 10px;
+                background: orange;
+                display: block;
+                width: 200px;
+                height: 200px;
+                float: left;
+            }
+            .secondary {
+                background: blue;
+            }
+
+            .subwidget {
+                width: 50px;
+                background: white;
+                display: inherit;
+            }
+
+            
+        </style>
+
+    </head>
+    <body>
+		<header class="header">header</header>
+		<div class="content">
+            <div class="widget">widget</div>
+            <div class="widget">widget
+                <div class="subwidget">subwidget</div>
+            </div>
+            <div class="widget secondary">widget blue</div>
+            <div class="gadget">gadget</div>  
+            <div class="widget secondary">widget blue</div>
+            <div class="widget">widget</div>
+            <div class="gadget secondary">gadget blue</div>
+            <div class="widget">widget</div>
+            <div class="gadget">gadget</div>
+            <div class="widget">widget</div>
+        </div>
+		<footer class="footer">footer</footer>
+    </body>
+</html>
