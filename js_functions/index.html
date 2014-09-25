@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>js functions</title>
+  </head>
+  <body>
+<!--  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+  <script type="text/javascript">
+// Exercise 3.1
+
+  var yell = function(string){
+    console.log(string.toUpperCase());
+  };
+  yell('crap');
+// End Exercise 3.1
+
+// Exercise 3.2
+  var divideBy = function(x, y) {
+    return x / y;
+  };
+
+  var result = divideBy(50, 2);
+  console.log('Result should be 25:', result);
+
+  result = divideBy(40, 10);
+  console.log('Result should be 4:', result);
+
+  result = divideBy(99, 3);
+  console.log('Result should be 33:', result);
+// End Exercise 3.2
+
+/**
+ * Exercise 0: angryGandalf (example)
+**/
+
+// Define angryGandalf with input parameters
+
+  // Define the variables needed
+
+  // Run conditional on type for 'grey' and 'white'
+
+  // Return message
+
+var angryGandalf = function(color) {
+  if (color === 'grey') {
+    return "YOU...SHALL NOT... PASS!";
+  }else if (color === 'white') {
+    return "You merely passed me to your demise."
+  }else {
+    return "I don't think I'm Gandalf anymore."
+  }
+}
+
+console.assert(angryGandalf('grey') === "YOU...SHALL NOT... PASS!");
+console.assert(angryGandalf('white') === "You merely passed me to your demise.");
+console.assert(angryGandalf(2) === "I don't think I'm Gandalf anymore.");
+// End of Exercise 0: angryGandalf
+  </script>
+</body>
+</html>
