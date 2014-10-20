@@ -12,14 +12,19 @@ function arrayTester(testArray, testString){
   //Now we need a way to traverse through the array to test if it contains the String that
   //was passed into the function.
 
+  var result = false;
+
   for (var i in testArray){
     if (testArray[i] == testString) {
-      console.log("String " + testString + " was found.")
-    }else{
-      console.log("Big Fat Nope")
+      result = true;
     }
   }
 
+  if (result == true){
+    console.log("String " + testString + " was found.")
+  }else{
+    console.log("Big Fat Nope")
+  }
 }
 //Test conditions:
 
