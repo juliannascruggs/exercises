@@ -1,43 +1,80 @@
-// EXERCISE 2 ***********
-
-// Create an array of arrays, aka a 2D array. Using the example listed below.
-// Sample array : var a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
-var raRa = [[1, 2, 3, 4],[1, 2, 3, 4],[1, 2, 3, 4],[1, 2, 3, 4]];
-
-// Sample Output :
-// "row 0"
-// " 1"
-// " 2"
-// " 1"
-// " 24"
-// "row 1"
-// etc....
-//***********To access 2-dimensional array elements we would "console.log(array[i][j]);"
-//var numberSet = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
-
-// Here's not how to do it:
-
-// var i;
-// var j;
-//Write the first for loop
-//for(i = 0; i < raRa.length; i++){
-
-  //Write second for loop to print the secondary data set
-//  for(j = 0; j < raRa[i].length; j++){
-//  	console.log(raRa[i][j]);
-//  }
-//}
-
-// Here's how you should do it: 
-
-for (var i in raRa) {
-	console.log("The value of raRa row " + i + " is: " + raRa[i])
-	for (var j in raRa[i]) {
-		console.log("The value of raRa row " + i + ", index " + j + " is " + raRa[i][j])
-	} 
-}
-// Note to self/teacher: I don't understand why calling raRa[i] and then proceeding that with [j] allows me to prnt the whole raRa
+//Create an array of objects
+/*Array Type: Hotel
+      Properties
+        Name: Motel 8
+        Rating: 4
+        Rooms: 104
+        Bookings: 87
+        Gym: false
+        Pool: true
+      Properties
+        Name: La Queso
+        Rating: 10000
+        Rooms: 100
+        Bookings: 100
+        Gym: false
+        Pool: true
+        Margaritas: always
+        */
 
 
 
+var hotelArray = [];
 
+// var hotel = {
+//   name: "Motel 8",
+//   rating: 4,
+//   rooms: 104,
+//   bookings: 87,
+//   gym: false,
+//   pool: true
+// };
+
+hotelArray.push({
+  name: "Motel 8",
+  rating: 4,
+  rooms: 104,
+  bookings: 87,
+  gym: false,
+  pool: true
+});
+
+// var hotel = {
+//   name: "La Quinta",
+//   rating: 5000,
+//   rooms: 200,
+//   bookings: 30,
+//   gym: false,
+//   pool: true,
+//   margaritas: "usually"
+// };
+
+hotelArray.push({
+  'name': "La Quinta",
+  'rating': 5000,
+  'rooms': 200,
+  'bookings': 30,
+  'gym': false,
+  'pool': true,
+  'margaritas': "usually"
+});
+
+//Now we need to print out each one of these variables in the Array. Only want what is stored in the
+//object, not the object keys.
+//Create a for loop that will console.log the elements in our array
+
+for (var i in hotelArray) {
+
+  console.log(hotelArray[i]);
+
+  for (var j in hotelArray[i]) {
+    console.log(hotelArray[i][j]);
+  }
+
+ }
+
+//Expected output:
+/*
+  Object {name: "Motel 8", rating: 4, rooms: 104, bookings: 87, gym: false…}
+  Object {name: "La Queso", rating: 10000, rooms: 100, bookings: 100, gym: false…}
+*/
